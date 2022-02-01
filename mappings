@@ -1,12 +1,12 @@
 CLASS net/minecraft/a/a/b/a/a net/minecraft/game/world/block/TileEntity
-CLASS net/minecraft/a/a/b/a/b net/minecraft/game/world/block/TileEntityFurnace
 CLASS net/minecraft/a/a net/minecraft/game/InventoryLargeChest
-CLASS net/minecraft/a/a/b/ad net/minecraft/world/block/BlockFlower
-CLASS net/minecraft/a/a/b/f net/minecraft/game/world/block/BlockCrops
-CLASS net/minecraft/a/a/d/d net/minecraft/game/world/material/MaterialTransparent
+CLASS net/minecraft/a/a/b/a/b net/minecraft/game/world/block/TileEntityFurnace
+CLASS net/minecraft/a/a/b/ad net/minecraft/game/world/block/BlockFlower
 CLASS net/minecraft/a/a/e/c com/mojang/nbt/NibbleArray
 	FIELD a data [B
-CLASS net/minecraft/a/a/b/e net/minecraft/game/world/block/BlockGravel
+CLASS net/minecraft/a/a/d/d net/minecraft/game/world/material/MaterialTransparent
+CLASS net/minecraft/a/a/b/f net/minecraft/game/world/block/BlockCrops
+CLASS net/minecraft/a/a/e/b net/minecraft/game/world/chunk/ChunkProviderLoadOrGenerate
 CLASS net/minecraft/a/a/d/c net/minecraft/game/world/material/Material
 	FIELD a air Lnet/minecraft/a/a/d/c;
 	FIELD b ground Lnet/minecraft/a/a/d/c;
@@ -27,29 +27,29 @@ CLASS net/minecraft/a/a/d/c net/minecraft/game/world/material/Material
 	METHOD a isSolid ()Z
 	METHOD b getCanBlockGrass ()Z
 	METHOD c getIsLiquid ()Z
-CLASS net/minecraft/a/a/e/b net/minecraft/world/chunk/ChunkProviderLoadOrGenerate
+CLASS net/minecraft/a/a/b/e net/minecraft/game/world/block/BlockGravel
 CLASS net/minecraft/a/a/e/e net/minecraft/game/world/chunk/ChunkProviderGenerate
-CLASS net/minecraft/a/a/b/g net/minecraft/game/world/block/BlockBreakable
-	FIELD a localFlag Z
 CLASS net/minecraft/a/a/e/d net/minecraft/game/world/chunk/Chunk
 	FIELD a isLit [B
 	FIELD b worldObj Lnet/minecraft/a/a/f;
+CLASS net/minecraft/a/a/b/g net/minecraft/game/world/block/BlockBreakable
+	FIELD a localFlag Z
 CLASS net/minecraft/a/a/a/a net/minecraft/game/world/path/PathPoint
-CLASS net/minecraft/a/a/c/a net/minecraft/game/world/terrain/LevelGenerator
 CLASS net/minecraft/a/a/a/c net/minecraft/game/world/path/PathFinder
 	METHOD a createEntityPathTo (Lnet/minecraft/a/c/b;IIIF)Lnet/minecraft/a/a/a/b;
-CLASS net/minecraft/a/a/b/a net/minecraft/game/world/block/BlockChest
+CLASS net/minecraft/a/a/c/a net/minecraft/game/world/terrain/LevelGenerator
 CLASS net/minecraft/a/a/a/b net/minecraft/game/world/path/PathEntity
-CLASS net/minecraft/a/a/d/b net/minecraft/game/world/material/MaterialLiquid
+CLASS net/minecraft/a/a/b/a net/minecraft/game/world/block/BlockChest
 CLASS net/minecraft/a/a/e/a net/minecraft/game/world/chunk/IChunkProvider
 	METHOD a chunkExists (II)Z
 	METHOD b provideChunk (II)Lnet/minecraft/a/a/e/d;
-CLASS net/minecraft/a/a/d/a net/minecraft/game/world/material/MaterialLogic
+CLASS net/minecraft/a/a/d/b net/minecraft/game/world/material/MaterialLiquid
 CLASS net/minecraft/a/a/a/d net/minecraft/game/world/path/Path
+CLASS net/minecraft/a/a/d/a net/minecraft/game/world/material/MaterialLogic
 CLASS net/minecraft/a/b/i net/minecraft/game/item/Item
 	FIELD am flint Lnet/minecraft/a/b/i;
 	FIELD aq shiftedIndex I
-CLASS net/minecraft/a/a/c/a/b net/minecraft/game/world/terrain/noise/NoiseGeneratorAbstract
+CLASS a/a net/minecraft/util/MathHelper
 CLASS net/minecraft/a/a/b/x net/minecraft/game/world/block/Block
 	FIELD ao blockIndexInTexture I
 	FIELD ap blockId I
@@ -59,20 +59,19 @@ CLASS net/minecraft/a/a/b/x net/minecraft/game/world/block/Block
 	METHOD a getBlockTexture (Lnet/minecraft/a/a/f;IIII)I
 	METHOD b isOpaqueCube ()Z
 	METHOD c shouldSideBeRendered (Lnet/minecraft/a/a/f;IIII)Z
-CLASS a/a net/minecraft/util/MathHelper
-CLASS net/minecraft/a/a/b/w net/minecraft/game/world/block/BlockSand
+CLASS net/minecraft/a/a/c/a/b net/minecraft/game/world/terrain/noise/NoiseGeneratorAbstract
 CLASS net/minecraft/a/a/c/a/c net/minecraft/game/world/terrain/noise/NoiseGeneratorOctaves
 	METHOD a generateNoise (DD)D
 	METHOD a generateNoise (DDD)D
+CLASS net/minecraft/a/a/b/w net/minecraft/game/world/block/BlockSand
 CLASS net/minecraft/a/b net/minecraft/game/IInventory
-CLASS com/a/a/a com/mojang/nbt/NBTTagCompound
 CLASS a/b net/minecraft/util/IProgressUpdate
 	METHOD a displayProgressMessage (Ljava/lang/String;)V
 		ARG 1 title
 	METHOD b displayLoadingString (Ljava/lang/String;)V
 		ARG 1 text
+CLASS com/a/a/a com/mojang/nbt/NBTTagCompound
 CLASS net/minecraft/a/b/k net/minecraft/item/stack/ItemStack
-CLASS net/minecraft/a/a/c net/minecraft/game/world/EntityMapSlot
 CLASS net/minecraft/a/c/a net/minecraft/game/entity/EntityPainting
 	FIELD N tickCounter I
 	FIELD O xPosition I
@@ -82,38 +81,29 @@ CLASS net/minecraft/a/c/a net/minecraft/game/entity/EntityPainting
 	FIELD b art Lnet/minecraft/a/c/d;
 	METHOD b setDirection (I)V
 		ARG 1 direction
+CLASS net/minecraft/a/a/c net/minecraft/game/world/EntityMapSlot
 CLASS net/minecraft/a/a/b net/minecraft/game/world/IWorldAccess
 	METHOD a markBlockAndNeighboursNeedUpdate (III)V
 	METHOD a markBlockRangeNeedsUpdate (IIIIII)V
 	METHOD a spawnParticle (Ljava/lang/String;DDDDDD)V
 	METHOD a playSound (Ljava/lang/String;DDDFF)V
+CLASS com/a/a/b com/mojang/nbt/NBTBase
 CLASS net/minecraft/a/a/a net/minecraft/game/world/LevelLoader
 	FIELD a guiLoading La/b;
 	METHOD <init> (La/b;)V
 		ARG 1 guiLoading
 	METHOD a load ()V
-CLASS com/a/a/b com/mojang/nbt/NBTBase
+CLASS net/minecraft/a/c/e net/minecraft/game/entity/EntityLiving
+	FIELD aj moveStrafing F
+	FIELD ak moveForward F
+	FIELD al isJumping Z
+	METHOD d updatePlayerActionState ()V
 CLASS net/minecraft/a/a/g net/minecraft/game/world/EntityMap
 	FIELD a width I
 	FIELD b depth I
 	FIELD c height I
 	FIELD d entityGrid [Ljava/util/List;
 	FIELD g entities Ljava/util/List;
-CLASS net/minecraft/a/c/e net/minecraft/game/entity/EntityLiving
-	FIELD aj moveStrafing F
-	FIELD ak moveForward F
-	FIELD al isJumping Z
-	METHOD d updatePlayerActionState ()V
-CLASS net/minecraft/a/a/b/q net/minecraft/game/world/block/BlockContainer
-CLASS net/minecraft/a/a/c/a/a net/minecraft/game/world/terrain/noise/NoiseGeneratorPerlin
-	FIELD b xCoord D
-	FIELD c yCoord D
-	FIELD d zCoord D
-CLASS net/minecraft/a/c/d net/minecraft/game/entity/EnumArt
-	FIELD a sizeXZ I
-	FIELD b sizeY I
-	FIELD c offsetXZ I
-	FIELD d offsetY I
 CLASS net/minecraft/a/a/f net/minecraft/game/world/World
 	FIELD d pathFinder Lnet/minecraft/a/a/a/c;
 	METHOD a blockExists (II)Z
@@ -121,7 +111,21 @@ CLASS net/minecraft/a/a/f net/minecraft/game/world/World
 	METHOD a pathTraceBlocks (Lnet/minecraft/a/d/a;Lnet/minecraft/a/d/a;)Lnet/minecraft/a/d/c;
 	METHOD c chunkExists (II)Z
 	METHOD d getChunkFromChunkCoords (II)Lnet/minecraft/a/a/e/d;
-CLASS net/minecraft/a/a/e net/minecraft/game/world/MetadataChunkBlock
+CLASS net/minecraft/a/c/d net/minecraft/game/entity/EnumArt
+	FIELD a sizeXZ I
+	FIELD b sizeY I
+	FIELD c offsetXZ I
+	FIELD d offsetY I
+CLASS net/minecraft/a/a/c/a/a net/minecraft/game/world/terrain/noise/NoiseGeneratorPerlin
+	FIELD b xCoord D
+	FIELD c yCoord D
+	FIELD d zCoord D
+CLASS net/minecraft/a/a/b/q net/minecraft/game/world/block/BlockContainer
+CLASS net/minecraft/a/c/c net/minecraft/game/entity/EntityCreature
+	FIELD N hasAttacked Z
+	FIELD a pathToEntity Lnet/minecraft/a/a/a/b;
+	FIELD b playerToAttack Lnet/minecraft/a/c/b;
+	METHOD c canEntityBeSeen (Lnet/minecraft/a/c/b;)Z
 CLASS net/minecraft/a/d/b net/minecraft/a/d/AxisAllignedBoundingBox
 	FIELD a minX D
 	FIELD b minY D
@@ -129,12 +133,7 @@ CLASS net/minecraft/a/d/b net/minecraft/a/d/AxisAllignedBoundingBox
 	FIELD d maxX D
 	FIELD e maxY D
 	FIELD f maxZ D
-CLASS net/minecraft/a/c/c net/minecraft/game/entity/EntityCreature
-	FIELD N hasAttacked Z
-	FIELD a pathToEntity Lnet/minecraft/a/a/a/b;
-	FIELD b playerToAttack Lnet/minecraft/a/c/b;
-	METHOD c canEntityBeSeen (Lnet/minecraft/a/c/b;)Z
-CLASS net/minecraft/a/a/d net/minecraft/game/world/EnumSkyBlock
+CLASS net/minecraft/a/a/e net/minecraft/game/world/MetadataChunkBlock
 CLASS net/minecraft/a/c/b net/minecraft/game/entity/Entity
 	FIELD F rand Ljava/util/Random;
 	FIELD c worldObj Lnet/minecraft/a/a/f;
@@ -155,3 +154,4 @@ CLASS net/minecraft/a/c/b net/minecraft/game/entity/Entity
 	FIELD u yOffset F
 	METHOD a setSize (FF)V
 	METHOD p isEntityAlive ()Z
+CLASS net/minecraft/a/a/d net/minecraft/game/world/EnumSkyBlock
