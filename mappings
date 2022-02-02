@@ -57,6 +57,7 @@ CLASS net/minecraft/a/a/f net/minecraft/game/world/World
 	FIELD b playerEntity Lnet/minecraft/a/c/b;
 	FIELD d pathFinder Lnet/minecraft/a/a/a/c;
 	FIELD g spawnY F
+	METHOD a playSoundEffect (DDDLjava/lang/String;FF)V
 	METHOD a blockExists (II)Z
 	METHOD a getBlockId (III)I
 	METHOD a spawnParticle (Ljava/lang/String;DDDDDD)V
@@ -179,12 +180,16 @@ CLASS net/minecraft/a/a/b/x net/minecraft/game/world/block/Block
 	FIELD ao blockIndexInTexture I
 	FIELD ap blockId I
 	FIELD ay blockMaterial Lnet/minecraft/a/a/d/c;
+	FIELD c blocksList [Lnet/minecraft/a/a/b/x;
 	FIELD f isBlockContainer [Z
 	FIELD h stone Lnet/minecraft/a/a/b/x;
 	FIELD i grassBlock Lnet/minecraft/a/a/b/af;
 	FIELD j dirt Lnet/minecraft/a/a/b/x;
 	FIELD k cobblestone Lnet/minecraft/a/a/b/x;
 	FIELD l planks Lnet/minecraft/a/a/b/x;
+	FIELD o waterMoving Lnet/minecraft/a/a/b/x;
+	FIELD p waterStill Lnet/minecraft/a/a/b/x;
+	FIELD q lavaMoving Lnet/minecraft/a/a/b/x;
 	FIELD r lavaStill Lnet/minecraft/a/a/b/x;
 	FIELD w coalOre Lnet/minecraft/a/a/b/x;
 	FIELD x wood Lnet/minecraft/a/a/b/x;
@@ -210,6 +215,7 @@ CLASS net/minecraft/a/a/b/x net/minecraft/game/world/block/Block
 	METHOD c renderAsNormalBlock ()Z
 	METHOD c shouldSideBeRendered (Lnet/minecraft/a/a/f;IIII)Z
 	METHOD d isCollidable ()Z
+	METHOD e onBlockPlaced (Lnet/minecraft/a/a/f;IIII)V
 CLASS net/minecraft/a/a/b/w net/minecraft/game/world/block/BlockSand
 CLASS net/minecraft/a/a/b/z net/minecraft/game/world/block/BlockSapling
 CLASS net/minecraft/a/a/b/y net/minecraft/game/world/block/BlockBookshelf
@@ -334,5 +340,7 @@ CLASS net/minecraft/a/b/k net/minecraft/item/stack/ItemStack
 CLASS net/minecraft/a/b/b net/minecraft/game/item/ItemSoup
 CLASS net/minecraft/a/b/a net/minecraft/game/item/ItemPickaxe
 CLASS net/minecraft/a/b/e net/minecraft/game/item/ItemBow
+CLASS net/minecraft/a/b/d net/minecraft/game/item/ItemBlock
+	FIELD at blockId I
 CLASS net/minecraft/a/b/c net/minecraft/game/item/ItemSword
 	FIELD at weaponDmg I
