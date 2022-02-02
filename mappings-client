@@ -186,6 +186,9 @@ CLASS net/minecraft/client/g/a net/minecraft/game/entity/player/EntityPlayerSP
 	FIELD an mc Lnet/minecraft/client/d;
 CLASS net/minecraft/a/a/b/b net/minecraft/game/world/block/BlockStill
 CLASS net/minecraft/a/a/b/a net/minecraft/game/world/block/BlockChest
+CLASS net/minecraft/client/g/c net/minecraft/client/player/MovementInputFromOptions
+	FIELD d movementKeyStates [Z
+	FIELD e gameSettings Lnet/minecraft/client/p;
 CLASS net/minecraft/a/a/b/d net/minecraft/game/world/block/BlockOreStorage
 CLASS net/minecraft/client/g/b net/minecraft/client/player/MovementInput
 CLASS net/minecraft/a/a/b/c net/minecraft/game/world/block/BlockOre
@@ -433,6 +436,7 @@ CLASS net/minecraft/a/b/f net/minecraft/game/item/ItemSeeds
 	FIELD at blockType I
 CLASS net/minecraft/a/b/a/h net/minecraft/game/item/recipe/RecipesWeapons
 	METHOD a addRecipes (Lnet/minecraft/a/b/a/f;)V
+CLASS net/minecraft/client/p net/minecraft/client/GameSettings
 CLASS net/minecraft/a/b/a/g net/minecraft/game/item/recipe/RecipesCrafting
 CLASS net/minecraft/a/b/e net/minecraft/game/item/ItemBow
 CLASS net/minecraft/a/b/d net/minecraft/game/item/ItemBlock
