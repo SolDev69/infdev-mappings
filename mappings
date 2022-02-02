@@ -2,6 +2,7 @@ CLASS net/minecraft/a/c/c/a net/minecraft/game/entity/misc/EntityTNT
 	FIELD a fuse I
 CLASS net/minecraft/a/b/p net/minecraft/game/item/ItemFood
 	FIELD at healAmount I
+CLASS net/minecraft/a/b/o net/minecraft/game/item/ItemPainting
 CLASS net/minecraft/a/c/c/b net/minecraft/game/entity/misc/EntityItem
 CLASS net/minecraft/a/a/d/d net/minecraft/game/world/material/MaterialTransparent
 CLASS net/minecraft/a/a/d/c net/minecraft/game/world/material/Material
@@ -391,7 +392,9 @@ CLASS net/minecraft/a/b/a/a net/minecraft/game/item/recipe/RecipesArmor
 	FIELD b recipeItems [[Ljava/lang/Object;
 	METHOD a addRecipe (Lnet/minecraft/a/b/a/f;)V
 		ARG 1 craftingManager
+CLASS net/minecraft/a/b/n net/minecraft/game/item/ItemFarmlandCreator
 CLASS net/minecraft/a/b net/minecraft/game/IInventory
+CLASS net/minecraft/a/b/m net/minecraft/game/item/ItemFlintAndSteel
 CLASS net/minecraft/a/b/l net/minecraft/game/item/ItemSpade
 	FIELD at blocksEffectiveAgainst [Lnet/minecraft/a/a/b/x;
 CLASS net/minecraft/a/b/k net/minecraft/item/stack/ItemStack
