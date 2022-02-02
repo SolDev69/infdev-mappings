@@ -14,7 +14,7 @@ CLASS net/minecraft/a/b/p net/minecraft/game/item/ItemFood
 	FIELD at healAmount I
 CLASS net/minecraft/a/b/o net/minecraft/game/item/ItemPainting
 CLASS net/minecraft/a/c/c/b net/minecraft/game/entity/misc/EntityItem
-CLASS net/minecraft/client/MinecraftApplet net/minecraft/client/applet/MinecraftApplet
+CLASS net/minecraft/client/MinecraftApplet net/minecraft/MinecraftApplet
 	FIELD a mcCanvas Ljava/awt/Canvas;
 	FIELD b mc Lnet/minecraft/client/d;
 	FIELD c mcThread Ljava/lang/Thread;
