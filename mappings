@@ -26,8 +26,8 @@ CLASS net/minecraft/a/a/d/c net/minecraft/game/world/material/Material
 	METHOD c getIsLiquid ()Z
 CLASS net/minecraft/a/a/d/b net/minecraft/game/world/material/MaterialLiquid
 CLASS net/minecraft/a/a/d/a net/minecraft/game/world/material/MaterialLogic
-CLASS a/a net/minecraft/util/MathHelper
 CLASS net/minecraft/a/a/c/a/b net/minecraft/game/world/terrain/noise/NoiseGeneratorAbstract
+CLASS a/a net/minecraft/util/MathHelper
 CLASS net/minecraft/a/a/c/a/c net/minecraft/game/world/terrain/noise/NoiseGeneratorOctaves
 	METHOD a generateNoise (DD)D
 	METHOD a generateNoise (DDD)D
@@ -53,6 +53,10 @@ CLASS net/minecraft/a/a/g net/minecraft/game/world/EntityMap
 	FIELD c height I
 	FIELD d entityGrid [Ljava/util/List;
 	FIELD g entities Ljava/util/List;
+CLASS net/minecraft/a/a/c/a/a net/minecraft/game/world/terrain/noise/NoiseGeneratorPerlin
+	FIELD b xCoord D
+	FIELD c yCoord D
+	FIELD d zCoord D
 CLASS net/minecraft/a/a/f net/minecraft/game/world/World
 	FIELD b playerEntity Lnet/minecraft/a/c/b;
 	FIELD d pathFinder Lnet/minecraft/a/a/a/c;
@@ -66,10 +70,6 @@ CLASS net/minecraft/a/a/f net/minecraft/game/world/World
 	METHOD c chunkExists (II)Z
 	METHOD d getChunkFromChunkCoords (II)Lnet/minecraft/a/a/e/d;
 	METHOD e getBrightness (III)F
-CLASS net/minecraft/a/a/c/a/a net/minecraft/game/world/terrain/noise/NoiseGeneratorPerlin
-	FIELD b xCoord D
-	FIELD c yCoord D
-	FIELD d zCoord D
 CLASS net/minecraft/a/a/e net/minecraft/game/world/MetadataChunkBlock
 CLASS net/minecraft/a/a/d net/minecraft/game/world/EnumSkyBlock
 CLASS net/minecraft/a/c/b/b net/minecraft/game/entity/passive/EntitySheep
@@ -131,7 +131,6 @@ CLASS net/minecraft/a/c/a/c net/minecraft/game/entity/mobs/EntitySkeleton
 CLASS net/minecraft/a/c/a/b net/minecraft/game/entity/mobs/EntitySpider
 CLASS net/minecraft/a/a/b/a/a net/minecraft/game/world/block/TileEntity
 CLASS net/minecraft/a/a/b/a/b net/minecraft/game/world/block/TileEntityFurnace
-CLASS net/minecraft/a/c/a/e net/minecraft/game/entity/mobs/EntityMonster
 CLASS net/minecraft/a/c/e/a net/minecraft/game/entity/player/EntityPlayer
 	FIELD N unusedMiningCooldown B
 	FIELD O score I
@@ -140,9 +139,10 @@ CLASS net/minecraft/a/c/e/a net/minecraft/game/entity/player/EntityPlayer
 	FIELD R username Ljava/lang/String;
 	FIELD a damageRemainder I
 	FIELD b inventory Lnet/minecraft/a/c/e/b;
+CLASS net/minecraft/a/c/a/e net/minecraft/game/entity/mobs/EntityMonster
 CLASS net/minecraft/a/c/a/d net/minecraft/game/entity/mobs/EntityCreeper
-CLASS net/minecraft/a/c/a/f net/minecraft/game/entity/mobs/EntityZombie
 CLASS net/minecraft/a/c/e/b net/minecraft/game/entity/player/PlayerInventory
+CLASS net/minecraft/a/c/a/f net/minecraft/game/entity/mobs/EntityZombie
 CLASS net/minecraft/a/a/b/ad net/minecraft/game/world/block/BlockFlower
 	METHOD b canPlantGrowOnThisBlockId (I)Z
 CLASS net/minecraft/a/a/b/ae net/minecraft/game/world/block/BlockBreakable
@@ -158,12 +158,12 @@ CLASS net/minecraft/a/a/b/h net/minecraft/game/world/block/BlockTNT
 CLASS net/minecraft/a/a/b/g net/minecraft/game/world/block/BlockLeavesBase
 	FIELD a graphicsLevel Z
 CLASS net/minecraft/a/a/b/j net/minecraft/game/world/StepSoundGlass
-CLASS net/minecraft/a/a/b/aa net/minecraft/game/world/block/BlockLog
 CLASS net/minecraft/a/a/b/i net/minecraft/game/world/block/StepSoundSand
-CLASS net/minecraft/a/a/b/ab net/minecraft/game/world/block/BlockFarmland
+CLASS net/minecraft/a/a/b/aa net/minecraft/game/world/block/BlockLog
 CLASS net/minecraft/a/a/b/l net/minecraft/game/world/block/BlockDirt
-CLASS net/minecraft/a/a/b/ac net/minecraft/game/world/block/BlockTorch
+CLASS net/minecraft/a/a/b/ab net/minecraft/game/world/block/BlockFarmland
 CLASS net/minecraft/a/a/b/k net/minecraft/game/world/block/BlockGears
+CLASS net/minecraft/a/a/b/ac net/minecraft/game/world/block/BlockTorch
 CLASS net/minecraft/a/a/b/b net/minecraft/game/world/block/BlockStill
 CLASS net/minecraft/a/a/b/a net/minecraft/game/world/block/BlockChest
 CLASS net/minecraft/a/a/b/d net/minecraft/game/world/block/BlockOreStorage
@@ -219,11 +219,9 @@ CLASS net/minecraft/a/a/b/x net/minecraft/game/world/block/Block
 	METHOD e onBlockPlaced (Lnet/minecraft/a/a/f;IIII)V
 CLASS net/minecraft/a/a/b/w net/minecraft/game/world/block/BlockSand
 CLASS net/minecraft/a/a/b/z net/minecraft/game/world/block/BlockSapling
-CLASS net/minecraft/a/a/b/y net/minecraft/game/world/block/BlockBookshelf
 CLASS com/a/a/a net/minecraft/nbt/NBTTagCompound
 	FIELD a tagMap Ljava/util/Map;
-CLASS net/minecraft/a/a/b/n net/minecraft/game/world/block/StepSound
-	METHOD a getBreakSound ()Ljava/lang/String;
+CLASS net/minecraft/a/a/b/y net/minecraft/game/world/block/BlockBookshelf
 CLASS net/minecraft/a/c/a net/minecraft/game/entity/EntityPainting
 	FIELD N tickCounter I
 	FIELD O xPosition I
@@ -233,15 +231,16 @@ CLASS net/minecraft/a/c/a net/minecraft/game/entity/EntityPainting
 	FIELD b art Lnet/minecraft/a/c/d;
 	METHOD b setDirection (I)V
 		ARG 1 direction
+CLASS net/minecraft/a/a/b/n net/minecraft/game/world/block/StepSound
+	METHOD a getBreakSound ()Ljava/lang/String;
 CLASS net/minecraft/a/a/b/m net/minecraft/game/world/block/BlockFlowing
 	FIELD aA flowingid I
 	FIELD az stillid I
+CLASS com/a/a/b net/minecraft/nbt/NBTBase
 CLASS net/minecraft/a/a/b/p net/minecraft/game/world/block/BlockFluid
 	FIELD a stillId I
 	FIELD b flowingId I
-CLASS com/a/a/b net/minecraft/nbt/NBTBase
 CLASS net/minecraft/a/a/b/o net/minecraft/game/world/block/BlockLeaves
-CLASS net/minecraft/a/a/b/r net/minecraft/game/world/block/BlockStone
 CLASS net/minecraft/a/c/e net/minecraft/game/entity/EntityLiving
 	FIELD V texture Ljava/lang/String;
 	FIELD W health I
@@ -256,13 +255,13 @@ CLASS net/minecraft/a/c/e net/minecraft/game/entity/EntityLiving
 	METHOD f getLivingSound ()Ljava/lang/String;
 	METHOD g getHurtSound ()Ljava/lang/String;
 	METHOD h getDeathSound ()Ljava/lang/String;
+CLASS net/minecraft/a/a/b/r net/minecraft/game/world/block/BlockStone
+CLASS net/minecraft/a/a/b/q net/minecraft/game/world/block/BlockContainer
 CLASS net/minecraft/a/c/d net/minecraft/game/entity/EnumArt
 	FIELD a sizeXZ I
 	FIELD b sizeY I
 	FIELD c offsetXZ I
 	FIELD d offsetY I
-CLASS net/minecraft/a/a/b/q net/minecraft/game/world/block/BlockContainer
-CLASS net/minecraft/a/a/b/t net/minecraft/game/world/block/BlockWorkbench
 CLASS net/minecraft/a/c/c net/minecraft/game/entity/EntityCreature
 	FIELD N hasAttacked Z
 	FIELD a pathToEntity Lnet/minecraft/a/a/a/b;
@@ -271,7 +270,7 @@ CLASS net/minecraft/a/c/c net/minecraft/game/entity/EntityCreature
 	METHOD a getBlockPathWeight (III)F
 	METHOD a attackEntity (Lnet/minecraft/a/c/b;F)V
 	METHOD c canEntityBeSeen (Lnet/minecraft/a/c/b;)Z
-CLASS net/minecraft/a/a/b/s net/minecraft/game/world/block/BlockFurnace
+CLASS net/minecraft/a/a/b/t net/minecraft/game/world/block/BlockWorkbench
 CLASS net/minecraft/a/c/b net/minecraft/game/entity/Entity
 	FIELD F rand Ljava/util/Random;
 	FIELD H fireResistance I
@@ -304,10 +303,19 @@ CLASS net/minecraft/a/c/b net/minecraft/game/entity/Entity
 	METHOD c moveEntity (DDD)V
 	METHOD i preparePlayerToSpawn ()V
 	METHOD p isEntityAlive ()Z
+CLASS net/minecraft/a/a/b/s net/minecraft/game/world/block/BlockFurnace
 CLASS net/minecraft/a/a net/minecraft/game/InventoryLargeChest
 CLASS net/minecraft/a/c/d/a net/minecraft/game/entity/projectile/EntityArrow
 	METHOD a setArrowHeading (DDDFF)V
 CLASS net/minecraft/a/a/c/a net/minecraft/game/world/terrain/LevelGenerator
+CLASS net/minecraft/a/b/a/c net/minecraft/game/item/recipe/CraftingRecipe
+	FIELD a width I
+	FIELD b height I
+	FIELD c ingredientMap [I
+	FIELD d recipeOutput Lnet/minecraft/a/b/k;
+	METHOD a createResult ()Lnet/minecraft/a/b/k;
+	METHOD a matchRecipe ([I)Z
+	METHOD a matches ([IIIZ)Z
 CLASS net/minecraft/a/b/i net/minecraft/game/item/Item
 	FIELD B bowlEmpty Lnet/minecraft/a/b/i;
 	FIELD H string Lnet/minecraft/a/b/i;
@@ -315,12 +323,15 @@ CLASS net/minecraft/a/b/i net/minecraft/game/item/Item
 	FIELD S helmetLeather Lnet/minecraft/a/b/i;
 	FIELD T plateLeather Lnet/minecraft/a/b/i;
 	FIELD U leatherLegs Lnet/minecraft/a/b/i;
+	FIELD V leatherBoots Lnet/minecraft/a/b/i;
 	FIELD W helmetChain Lnet/minecraft/a/b/i;
 	FIELD X plateChain Lnet/minecraft/a/b/i;
 	FIELD Y chainLegs Lnet/minecraft/a/b/i;
+	FIELD Z chainBoots Lnet/minecraft/a/b/i;
 	FIELD aa helmetIron Lnet/minecraft/a/b/i;
 	FIELD ab plateIron Lnet/minecraft/a/b/i;
 	FIELD ac ironLegs Lnet/minecraft/a/b/i;
+	FIELD ad ironBoots Lnet/minecraft/a/b/i;
 	FIELD ae helmetDiamond Lnet/minecraft/a/b/i;
 	FIELD af plateDiamond Lnet/minecraft/a/b/i;
 	FIELD ag diamondLegs Lnet/minecraft/a/b/i;
@@ -350,9 +361,13 @@ CLASS net/minecraft/a/b/i net/minecraft/game/item/Item
 	METHOD b getIconFromDamage ()I
 	METHOD b getStrOnBlock (Lnet/minecraft/a/a/b/x;)F
 	METHOD b damageItem (Lnet/minecraft/a/b/k;)V
-CLASS net/minecraft/a/b/a/b net/minecraft/game/item/recipe/RecipesCrafting
 CLASS net/minecraft/a/b/h net/minecraft/game/item/ItemAxe
 	FIELD at reduceDamageAmount [Lnet/minecraft/a/a/b/x;
+CLASS net/minecraft/a/b/a/a net/minecraft/game/item/recipe/RecipesArmor
+	FIELD a recipePatterns [[Ljava/lang/String;
+	FIELD b recipeItems [[Ljava/lang/Object;
+	METHOD a addRecipe (Lnet/minecraft/a/b/a/f;)V
+		ARG 1 craftingManager
 CLASS net/minecraft/a/b/g net/minecraft/game/item/ItemTool
 CLASS net/minecraft/a/b net/minecraft/game/IInventory
 CLASS net/minecraft/a/b/k net/minecraft/item/stack/ItemStack
@@ -361,6 +376,8 @@ CLASS net/minecraft/a/b/k net/minecraft/item/stack/ItemStack
 CLASS net/minecraft/a/b/b net/minecraft/game/item/ItemSoup
 CLASS net/minecraft/a/b/a net/minecraft/game/item/ItemPickaxe
 CLASS net/minecraft/a/b/e net/minecraft/game/item/ItemBow
+CLASS net/minecraft/a/b/a/f net/minecraft/game/item/recipe/CraftingManager
+	METHOD a addRecipe (Lnet/minecraft/a/b/k;[Ljava/lang/Object;)V
 CLASS net/minecraft/a/b/d net/minecraft/game/item/ItemBlock
 	FIELD at blockId I
 CLASS net/minecraft/a/b/c net/minecraft/game/item/ItemSword
