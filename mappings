@@ -75,7 +75,7 @@ CLASS net/minecraft/a/a/e net/minecraft/game/world/MetadataChunkBlock
 CLASS net/minecraft/a/a/d net/minecraft/game/world/EnumSkyBlock
 CLASS net/minecraft/a/c/b/b net/minecraft/game/entity/passive/EntitySheep
 	FIELD a sheared Z
-CLASS net/minecraft/a/c/b/a net/minecraft/entity/passive/EntityAnimal
+CLASS net/minecraft/a/c/b/a net/minecraft/game/entity/passive/EntityAnimal
 CLASS net/minecraft/a/c/b/c net/minecraft/game/entity/passive/EntityPig
 CLASS net/minecraft/a/a/e/c net/minecraft/nbt/NibbleArray
 	FIELD a data [B
@@ -394,6 +394,12 @@ CLASS net/minecraft/a/b/a/a net/minecraft/game/item/recipe/RecipesArmor
 		ARG 1 craftingManager
 CLASS net/minecraft/a/b/n net/minecraft/game/item/ItemFarmlandCreator
 CLASS net/minecraft/a/b net/minecraft/game/IInventory
+	METHOD a getInventorySize ()I
+	METHOD a getStackInSlot (I)Lnet/minecraft/a/b/k;
+	METHOD a decrStackSize (II)Lnet/minecraft/a/b/k;
+	METHOD a setInventorySlotContents (ILnet/minecraft/a/b/k;)V
+	METHOD b getInventoryName ()Ljava/lang/String;
+	METHOD c getInventoryStackLimit ()I
 CLASS net/minecraft/a/b/m net/minecraft/game/item/ItemFlintAndSteel
 CLASS net/minecraft/a/b/l net/minecraft/game/item/ItemSpade
 	FIELD at blocksEffectiveAgainst [Lnet/minecraft/a/a/b/x;
