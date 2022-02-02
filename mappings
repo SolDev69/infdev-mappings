@@ -174,6 +174,7 @@ CLASS net/minecraft/a/a/b/x net/minecraft/game/world/block/Block
 	FIELD P grayWool Lnet/minecraft/a/a/b/x;
 	FIELD aa tnt Lnet/minecraft/a/a/b/x;
 	FIELD ab bookshelf Lnet/minecraft/a/a/b/x;
+	FIELD af fire Lnet/minecraft/a/a/b/ag;
 	FIELD ag chest Lnet/minecraft/a/a/b/x;
 	FIELD ai diamondOre Lnet/minecraft/a/a/b/x;
 	FIELD am farmland Lnet/minecraft/a/a/b/x;
@@ -311,6 +312,23 @@ CLASS net/minecraft/a/b/i net/minecraft/game/item/Item
 	FIELD B bowlEmpty Lnet/minecraft/a/b/i;
 	FIELD H string Lnet/minecraft/a/b/i;
 	FIELD I feather Lnet/minecraft/a/b/i;
+	FIELD S helmetLeather Lnet/minecraft/a/b/i;
+	FIELD T plateLeather Lnet/minecraft/a/b/i;
+	FIELD U leatherLegs Lnet/minecraft/a/b/i;
+	FIELD W helmetChain Lnet/minecraft/a/b/i;
+	FIELD X plateChain Lnet/minecraft/a/b/i;
+	FIELD Y chainLegs Lnet/minecraft/a/b/i;
+	FIELD aa helmetIron Lnet/minecraft/a/b/i;
+	FIELD ab plateIron Lnet/minecraft/a/b/i;
+	FIELD ac ironLegs Lnet/minecraft/a/b/i;
+	FIELD ae helmetDiamond Lnet/minecraft/a/b/i;
+	FIELD af plateDiamond Lnet/minecraft/a/b/i;
+	FIELD ag diamondLegs Lnet/minecraft/a/b/i;
+	FIELD ah diamondBoots Lnet/minecraft/a/b/i;
+	FIELD ai helmetGold Lnet/minecraft/a/b/i;
+	FIELD aj plateGold Lnet/minecraft/a/b/i;
+	FIELD ak goldLegs Lnet/minecraft/a/b/i;
+	FIELD al goldBoots Lnet/minecraft/a/b/i;
 	FIELD am flint Lnet/minecraft/a/b/i;
 	FIELD an rawPorkChop Lnet/minecraft/a/b/i;
 	FIELD aq shiftedIndex I
@@ -321,6 +339,8 @@ CLASS net/minecraft/a/b/i net/minecraft/game/item/Item
 	FIELD i bow Lnet/minecraft/a/b/i;
 	FIELD j coal Lnet/minecraft/a/b/i;
 	FIELD k diamond Lnet/minecraft/a/b/i;
+	FIELD l ingotIron Lnet/minecraft/a/b/i;
+	FIELD m ingotGold Lnet/minecraft/a/b/i;
 	METHOD a getDmgOnEntity ()I
 	METHOD a setIconIndex (I)Lnet/minecraft/a/b/i;
 		ARG 1 iconIndex
@@ -330,6 +350,7 @@ CLASS net/minecraft/a/b/i net/minecraft/game/item/Item
 	METHOD b getIconFromDamage ()I
 	METHOD b getStrOnBlock (Lnet/minecraft/a/a/b/x;)F
 	METHOD b damageItem (Lnet/minecraft/a/b/k;)V
+CLASS net/minecraft/a/b/a/b net/minecraft/game/item/recipe/RecipesCrafting
 CLASS net/minecraft/a/b/h net/minecraft/game/item/ItemAxe
 	FIELD at reduceDamageAmount [Lnet/minecraft/a/a/b/x;
 CLASS net/minecraft/a/b/g net/minecraft/game/item/ItemTool
