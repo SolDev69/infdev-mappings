@@ -260,7 +260,7 @@ CLASS net/minecraft/a/a/b/ac net/minecraft/game/world/block/BlockTorch
 CLASS net/minecraft/client/c/i net/minecraft/client/gui/GuiScreen
 CLASS net/minecraft/client/c/j net/minecraft/client/gui/rendering/FontRenderer
 CLASS net/minecraft/a/a/b/b net/minecraft/game/world/block/BlockStill
-CLASS net/minecraft/client/g/a net/minecraft/game/entity/player/EntityPlayerSP
+CLASS net/minecraft/client/g/a net/minecraft/game/client/player/EntityPlayerSP
 	FIELD a movementInput Lnet/minecraft/client/g/b;
 	FIELD an mc Lnet/minecraft/client/d;
 CLASS net/minecraft/a/a/b/a net/minecraft/game/world/block/BlockChest
